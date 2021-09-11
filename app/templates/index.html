@@ -1,33 +1,18 @@
-{% import 'macros.html' as macro%}
-<!DOCTYPE html>
-<html>
+{% extends 'base.html'%} {% import 'macros.html' as macro%}
 
-<head>
-    <meta charset="utf-8"> {% if title %}
-    <title> {{ title }}</title>
-    {% else %}
-    <title> Welcome to the best Movie Review website </title>
-    {% endif %}
-</head>
 
-<body>
-    <h1>{{head}}</h1>
-    <!-- trending News section  -->
-    <h3>Trending News</h3>
-    <ul>
-        {{ macro.displayNewsList(trending)}}
+<!-- trending News section  -->
+<h3>Trending News</h3>
+<ul>
+    {{ macro.displayNewsList(trending)}}
 
-    </ul>
-    <!-- Current news  -->
-    <h3> Current News </h3>
-    <ul>
-        {{ macro.displayNewsList(current)}}
-    </ul>
-    <!-- world news -->
-    <h3>World news</h3>
-    <ul>
-        {{ macro.displayNewsList(world)}}
-
-</body>
-
-</html>
+</ul>
+<!-- Current news  -->
+<h3> Current News </h3>
+<ul>
+    {{ macro.displayNewsList(current)}}
+</ul>
+<!-- world news -->
+<h3>World news</h3>
+<ul>
+    {{ macro.displayNewsList(world)}}
