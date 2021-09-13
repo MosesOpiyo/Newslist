@@ -1,9 +1,10 @@
+from instance.config import NEWS_API_KEY
 class Config:
     '''
     General configuration parent class
     '''
-    NEWS_API_BASE_URL =('https://https://newsapi.org/v2/{}?api_key={}')
-    pass
+    NEWS_API_BASE_URL ='https://newsapi.org/v2/{}?q={}&apiKey={}'
+    NEWS_API = NEWS_API_KEY
 
 
 
@@ -14,7 +15,7 @@ class ProdConfig(Config):
     Args:
         Config: The parent configuration class with General configuration settings
     '''
-    pass
+
 
 
 class DevConfig(Config):

@@ -1,6 +1,6 @@
 from flask import render_template
 from app import app
-from flask import render_template,request,redirect,url_for
+from flask import render_template,redirect,url_for
 from .request import get_news1,get_news2,search_news
 
 # Views
