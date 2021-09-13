@@ -45,7 +45,7 @@ def process_results(news_list):
         id = news_item.get('id')
         name = news_item.get('name')
         author = news_item.get('author')
-        title = news_item.get('original_title')
+        title = news_item.get('title')
         description = news_item.get('description')
         image = news_item.get('urlToImage')
         published_date = news_item.get('publishedAt')
@@ -55,7 +55,8 @@ def process_results(news_list):
         if image:
             news_object = News(id,name,author,title,description,image,published_date,content)
             news_results.append(news_object)
-
+        
+    print(news_list)
     return news_results
 
 
@@ -83,7 +84,7 @@ def get_news2(id):
 
 
 def search_news(news_name):
-    search_news_url = 'https://newsapi.org/v2/{}?api_Key={}&query={}'.format(api_key,news_name)
+    search_news_url = f'https://newsapi.org/v2/top-headlines?apiKey={api_key}&q={news_name}'
     with urllib.request.urlopen(search_news_url) as url:
         search_news_data = url.read()
         search_news_response = json.loads(search_news_data)
