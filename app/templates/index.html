@@ -5,19 +5,25 @@
 {% block styles%} {{ super() }}
 <link rel="stylesheet" href="{{url_for('static',filename='css/stlye.css')}}"> {% endblock %}
 
+<div class="container">
+    <form>
+        <input type="text" name="news_query" placeholder="Search for News" class="form-control">
+        <input type="submit" value="Submit" class="btn btn-default">
+    </form>
 
-<!-- trending News section  -->
-<h3>Trending News</h3>
-<ul>
-    {{ macro.displayNewsList(trending)}}
 
-</ul>
-<!-- Current news  -->
-<h3> Current News </h3>
-<ul>
-    {{ macro.displayNewsList(current)}}
-</ul>
-<!-- world news -->
-<h3>World news</h3>
-<ul>
-    {{ macro.displayNewsList(world)}}
+    <!-- trending News section  -->
+    <h3>Trending News</h3>
+    <ul>
+        {{ macro.displayNewsList(trending)}}
+
+    </ul>
+    <!-- Current news  -->
+    <h3> Current News </h3>
+    <ul>
+        {{ macro.displayNewsList(current)}}
+    </ul>
+    <!-- world news -->
+    <h3>World news</h3>
+    <ul>
+        {{ macro.displayNewsList(world)}}
