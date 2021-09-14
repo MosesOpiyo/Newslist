@@ -3,22 +3,23 @@
 <!-- Styles block -->
 
 
+<div class="contain" style="background-color:grey;width: 100%;height: 30vh;">
+    <h1 style="margin-left: 15%;padding-top: 5%;color: white;">News News News</h1>
+    <p style="margin-left: 15%;padding-top: 1%;color: white;">Bring all the news around you, to you</p>
+</div>
 
 <div class="container">
-    <form>
-        <input type="text" name="news_query" placeholder="Search for News" class="form-control">
-        <input type="submit" value="Search" class="btn btn-default">
-    </form>
+
     <div class="current">
         <!-- Current news  -->
-        <h1 margin> Current News </h1>
+        <h1 style="padding-top:20px;padding-bottom: 50px;"> Current News </h1>
         <ul>
             {{ macro.displayNewsList(current)}}
         </ul>
     </div>
     <div class="world">
         <!-- world news -->
-        <h1>World news</h1>
+        <h1 style="padding-top:20px;padding-bottom: 50px;">World news</h1>
         <ul>
             {{ macro.displayNewsList(world)}}{% endblock %}
         </ul>
