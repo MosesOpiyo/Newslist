@@ -1,3 +1,4 @@
+from os import link
 from app import app
 import urllib.request,json
 from .models import news
@@ -50,10 +51,11 @@ def process_results(news_list):
         image = news_item.get('urlToImage')
         published_date = news_item.get('publishedAt')
         content = news_item.get('content')
+        link = news_item.get('url')
        
 
         if image:
-            news_object = News(id,name,author,title,description,image,published_date,content)
+            news_object = News(id,name,author,title,description,image,published_date,content,link)
             news_results.append(news_object)
         
     print(news_list)
@@ -77,8 +79,9 @@ def get_news2(id):
              image = news_details_response.get('urlToImage')
              published_date = news_details_response.get('publishedAt')
              content = news_details_response.get('content')
+             link = news_details_response.get('url')
 
-             news_object = News(id,name,author,title,description,image,published_date,content)
+             news_object = News(id,name,author,title,description,image,published_date,content,link)
     
     return news_object
 
