@@ -1,25 +1,24 @@
 from flask import render_template
-from app import app
+from . import main
 from flask import render_template,redirect,url_for
-from .request import get_news1,get_news2,search_news
+from ..request import get_news1,get_news2,search_news
 
 # Views
-@app.route('/')
+@main.route('/')
 def index():
 
     '''
     View root page function that returns the index page and its data
     '''
-    trending_news = get_news1('trending')
     current_news = get_news1('current')
     world_wide_news = get_news1('World')
     title = 'Home - Welcome to The best News Website Online'
     head = 'todays headlines'
 
-    return render_template('index.html',title = title,head = head,trending = trending_news,current = current_news,world = world_wide_news)
+    return render_template('index.html',title = title,head = head,current = current_news,world = world_wide_news)
     
 
-@app.route('/news/<news_id>')
+@main.route('/news/<news_id>')
 def news(news_id):
     '''
     View news page function that returns the news details page and its data
@@ -28,7 +27,7 @@ def news(news_id):
     title = f'{news.title}'
     return render_template('news.html',id = news_id,news = news,title = title)
 
-@app.route('/search/<news_name>')
+@main.route('/search/<news_name>')
 def search(news_name):
     '''
     View function to display the search results

@@ -1,15 +1,17 @@
 from os import link
-from app import app
 import urllib.request,json
-from .models import news
-
-News = news.News
+from .news import News
 
 # Getting api key
-api_key = app.config['NEWS_API']
+api_key = None
+# Getting the movie base url
+base_url = None
 
-# Getting the news base url
-base_url = app.config["NEWS_API_BASE_URL"]
+def configure_request(app):
+    global api_key,base_url
+    api_key = app.config['NEWS_API_KEY']
+    base_url = app.config['NEWS_API_BASE_URL']
+
 
 def get_news1(category):
     '''
@@ -87,7 +89,7 @@ def get_news2(id):
 
 
 def search_news(news_name):
-    search_news_url = f'https://newsapi.org/v2/top-headlines?apiKey={api_key}&q={news_name}'
+    search_news_url = f'https://newsapi.org/v2/top-headlines?q={news_name}&apiKey={api_key}'
     with urllib.request.urlopen(search_news_url) as url:
         search_news_data = url.read()
         search_news_response = json.loads(search_news_data)
