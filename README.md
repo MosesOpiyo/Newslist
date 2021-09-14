@@ -1,3 +1,5 @@
+<img src="https://github.com/MosesOpiyo/Newslist/blob/master/app/static/Screenshot%20from%202021-09-14%2008-09-30.png?raw=true">
+
 ## Newslist
 
 This is a web application that displays news articles from multiple sources to a user. It consumes the NEWS API to get all the requests.
