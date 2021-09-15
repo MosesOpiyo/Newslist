@@ -59,8 +59,6 @@ def process_results(news_list):
         if image:
             news_object = News(id,name,author,title,description,image,published_date,content,link)
             news_results.append(news_object)
-        
-    print(news_list)
     return news_results
 
 
