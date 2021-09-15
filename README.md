@@ -21,22 +21,22 @@ The application consumes the NEWS_API to get news from a variety of news sources
 ## Dependencies
 For full functionality of the application install the following:
 
-certifi==2021.5.30
-charset-normalizer==2.0.4
-click==8.0.1
-dominate==2.6.0
-Flask==2.0.1
-Flask-Bootstrap==3.3.7.1
-Flask-Script==2.0.6
-gunicorn==20.1.0
-idna==3.2
-itsdangerous==2.0.1
-Jinja2==3.0.1
-MarkupSafe==2.0.1
-requests==2.26.0
-urllib3==1.26.6
-visitor==0.1.3
-Werkzeug==2.0.1
+1. certifi==2021.5.30
+2. charset-normalizer==2.0.4
+3. click==8.0.1
+4. dominate==2.6.0
+5. Flask==2.0.1
+6. Flask-Bootstrap==3.3.7.1
+7. Flask-Script==2.0.6
+8. gunicorn==20.1.0
+9. idna==3.2
+10. itsdangerous==2.0.1
+11. Jinja2==3.0.1
+12. MarkupSafe==2.0.1
+13. requests==2.26.0
+14. urllib3==1.26.6
+15. visitor==0.1.3
+16. Werkzeug==2.0.1
 
 ## Future Improvements
 
