@@ -8,6 +8,9 @@ This is a web application that displays news articles from multiple sources to a
 
 The application consumes the NEWS_API to get news from a variety of news sources and according to queries that are passed in via the views.py file, filters the data and brings back only the specified data. This application shows different categories of news on the home page.
 
+## Link to Hosted site
+
+Click <button href = "https://habari-kimtandao.herokuapp.com/">here</Button> to have a look at the site.
 
 
 ## Technologies Used
