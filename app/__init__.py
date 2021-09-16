@@ -3,6 +3,7 @@ from flask_bootstrap import Bootstrap
 from .main import main,views
 from .request import configure_request
 from config import config_options
+from .news import News
 
 
  # Initializing Flask Extensions
