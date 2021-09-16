@@ -10,7 +10,9 @@ The application consumes the NEWS_API to get news from a variety of news sources
 
 ## Link to Hosted site
 
-Click <button href = "https://habari-kimtandao.herokuapp.com/">here</Button> to have a look at the site.
+Click the link below to have a look at the site.
+
+"https://habari-kimtandao.herokuapp.com/
 
 
 ## Technologies Used
